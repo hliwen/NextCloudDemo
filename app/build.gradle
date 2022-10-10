@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 31
+
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.example.nextclouddemo"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    lintOptions {
+        xmlReport false
+        warningsAsErrors true
+        quiet false
+        showAll true
+        disable 'Assert', 'DefaultLocale', 'GetInstance', 'TrulyRandom'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            jni.srcDirs = []
+
+        }
+    }
+}
+configurations.all {
+    exclude group: "org.slf4j", module: "slf4j-log4j12"
+    exclude group: "log4j", module: "log4j"
+}
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+
+    implementation 'com.github.mjdev:libaums:0.7.4'
+
+    implementation 'com.github.nextcloud:android-library:2.1.0'
+    implementation 'org.apache.jackrabbit:jackrabbit-webdav:2.0.1'
+
+
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+ }

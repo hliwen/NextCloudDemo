@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/surfaceViewParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/guanji"
+            style="@style/ButtonStyle"
+            android:onClick="onClickHandler"
+            android:text="关机" />
+
+        <Button
+            android:id="@+id/downloadphoto"
+            style="@style/ButtonStyle"
+            android:onClick="onClickHandler"
+            android:text="重新扫描" />
+
+        <Button
+            android:id="@+id/aaa"
+            style="@style/ButtonStyle"
+            android:onClick="onClickHandler"
+            android:text="打开端口控制界面" />
+
+
+        <Button
+            android:id="@+id/openPreview"
+            style="@style/ButtonStyle"
+            android:onClick="onClickHandler"
+            android:text="打开预览界面" />
+
+        <Button
+            android:id="@+id/closePreview"
+            style="@style/ButtonStyle"
+            android:onClick="onClickHandler"
+            android:text="关闭预览界面" />
+
+        <Button
+            android:id="@+id/clearView"
+            style="@style/ButtonStyle"
+            android:onClick="onClickHandler"
+            android:text="清屏" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="125dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/服务器状态"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="服务器状态"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/入网号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="入网号"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/云端名称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="云端名称"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+
+        <TextView
+            android:id="@+id/本次上传数量"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="本次上传数量"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/本次上传耗时"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="本次上传耗时"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/相机状态"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="相机状态"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/U盘空间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="U盘空间"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/U盘图片数量"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="U盘图片数量"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/已上传张数"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="已上传张数"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/已下载张数"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:onClick="onClickHandler"
+            android:text="已下载张数"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="270dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/messageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
